@@ -50,8 +50,7 @@
                         <b>category: </b> <?php echo $category; ?><br>
                         <b>stock: </b> <?php echo $stock; ?><br>
                         <b>description: </b> <?php echo $description; ?><br>
-                        <!-- <img src="images/<?php echo $picture; ?>"> -->
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png">
+                        <img src="images/<?php echo $picture; ?>">
                     </p>
                     
                 </div>
