@@ -35,7 +35,7 @@
 
                 <a href="#" class="post">
                     <figure class="post-image">
-                        <img src="images/Cuadros/<?php echo $picture; ?>" alt="">
+                        <img src="images/cuadros/<?php echo $picture; ?>" alt="">
                     </figure>
                     <h1><?php echo $name; ?></h1>
                         <p>
