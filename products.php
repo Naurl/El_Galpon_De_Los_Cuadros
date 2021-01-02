@@ -8,10 +8,10 @@
 <body>
     
   <?php 
-  include("DBConection.php");
+  include("scripts/php/sys_helpers_database/connection.php");
   ?>
 
-  <section class="todosCuadros">
+  <section class="products">
     <div class= "filter">
         <form accept-charset="utf-8" method="POST">
             <div>
@@ -29,11 +29,11 @@
     </div>
     <div>
         <?php
-            include("mostrarCuadros.php");
+            include("show_products.php");
         ?>
     </div>
   </section>
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="scripts/todosCuadrosEvents.js"></script>
+  <script src="scripts/products/products_events.js"></script>
 </body>
 </html>

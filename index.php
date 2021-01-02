@@ -7,10 +7,10 @@
 <body>
   
   <?php
-  include("DBConection.php");
-  include("carrucelPaginaPrincipal.php");
+  include("scripts/php/sys_helpers_database/connection.php");
+  include("products_slider.php");
 
-  include("mostrarCuadros.php");
+  include("show_products.php");
   ?>
 </body>
 </html>
