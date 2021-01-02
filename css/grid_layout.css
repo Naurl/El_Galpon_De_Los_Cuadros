@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+    font-family: Arial;
+}
+
+.post-list{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px, 293px));
+
+    justify-content: center;
+    grid-gap: 28px;
+}
+
+.post{
+    cursor: pointer;/*Sale la manito en el cursor siempre que estemos sobre el elemento.*/
+    position: relative;
+    display: block;
+}
+
+.post-image{
+    margin: 0px;/*Quitamos el margen por defecto de la etiqueta img*/
+}
+
+.post-image img{
+    width: 100%;
+    vertical-align: top;/*Nos ayuda a quitar un margen inferior que se le coloca a todas las imagenes cuando no se define un vertical-align de ningun tipo*/
+}
+
+.post-overlay{
+    background:  rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post:hover .post-overlay{
+    display: flex;
+}
+
+
+.post-likes,
+.post-comments{
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+/*768 px layout standard como el ipad.*/
+@media screen and (max-width: 768px){
+    .post-list{
+        grid-gap: 3px;
+    }
+}
