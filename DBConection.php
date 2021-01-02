@@ -8,11 +8,7 @@
     //$db = "id15801236_el_galpon_cuadros_db";//Only for deployments
     $connection = mysqli_connect($host, $user, $pass, $db);
 
-    if($connection)
-    {
-    echo "Todooo correctoo!!";
-    }
-    else
+    if(!$connection)
     {
     echo "Todooo maaaal!!";
     }
