@@ -1,6 +1,6 @@
 <?php
 
-    require('DBConection.php');
+    require('scripts/php/sys_helpers_database/connection.php');
 
     //Variable de búsqueda
     $consultaBusqueda = $_POST['filterValue'];
@@ -13,7 +13,7 @@
     $consultaBusqueda = str_replace($caracteres_malos, $caracteres_buenos, $consultaBusqueda);
 
     //Variable vacía (para evitar los E_NOTICE)
-    $mensaje = "";
+    $mensaje = array();
 
     //Comprueba si $consultaBusqueda está seteado
     if (isset($consultaBusqueda)) {
@@ -34,30 +34,7 @@
             } else {
                 //La variable $resultado contiene el array que se genera en la consulta, así que obtenemos los datos y los mostramos en un bucle
                 while($row = mysqli_fetch_array($consulta)) {
-                    $id = $row['id'];
-                    $name = $row['name'];
-                    $type = $row['type'];
-                    $category = $row['category'];
-                    $stock = $row['stock'];
-                    $description = $row['description'];
-                    $picture = $row['picture'];
-                    $pictureFormat = $row['pictureFormat'];
-
-                    $mensaje .= "<a href=\"#\" class=\"post\">
-                        <figure class=\"post-image\">
-                            <img src=\"images/Cuadros/$picture\" alt=\"\">
-                        </figure>
-                        <h1>$name</h1>
-                            <p>
-                                <b>ID: </b>$id<br>
-                                <b>Nombre: </b>$name<br>
-                                <b>type: </b>$type<br>
-                                <b>category: </b>$category><br>
-                                <b>stock: </b>$stock<br>
-                                <b>description: </b>$description<br>
-                            </p>
-                    </a>";
-
+                    $mensaje[] = $row;
                 }//Fin while $row
             }//Fin else $filas
             
@@ -68,6 +45,6 @@
         }
         
         //Devolvemos el mensaje que tomará jQuery
-        echo $mensaje;
+        echo json_encode($mensaje);
     }
 ?>
