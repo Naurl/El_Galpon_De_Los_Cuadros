@@ -16,9 +16,9 @@ function OnSearchByNameBtnClick()
 
         if(textValue && textValue != "")
         {
-            //$.post("searchToDB.php", {table: "cuadros", filterValue: textValue, filterField: "name"}, queryCallback);
+            //$.post("scripts/php/sys_helpers_database/query.php", {table: "cuadros", filterValue: textValue, filterField: "name"}, queryCallback);
             //jQuery.post( url [, data ] [, success ] [, dataType ] )
-            $.post("getProductList.php", {table: "cuadros", filterValue: textValue, filterField: "name"}, queryCallback, "html");
+            $.post("get_products_list.php", {table: "cuadros", filterValue: textValue, filterField: "name"}, queryCallback, "html");
         }
     });
 }

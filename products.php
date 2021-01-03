@@ -8,10 +8,10 @@
 <body>
     
   <?php 
-  include("DBConection.php");
+  include("scripts/php/sys_helpers_database/connection.php");
   ?>
 
-  <section class="todosCuadros">
+  <section class="products">
     <div class= "filter">
         <form accept-charset="utf-8" method="POST">
             <div>
@@ -29,7 +29,7 @@
     </div>
     <div>
         <?php
-            include("mostrarCuadros.php");
+            include("show_products.php");
         ?>
     </div>
   </section>
@@ -38,6 +38,6 @@
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
-  <script src="scripts/todosCuadrosEvents.js"></script>
+  <script src="scripts/products/products_events.js"></script>
 </body>
 </html>

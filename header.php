@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/mobile.css">
   <link rel="stylesheet" href="css/animation.css">
@@ -10,16 +10,6 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="icon" href ="images/logos/galpon.ico">
   <title>El Galpon de los Cuadros</title>
-
-  <style>
-    
-    body {
-
-        background: black;
-        background-size: 100% auto, 100% ;
-    } 
-
-  </style>
 </head>
 <header>
     <section class = "header_contact_section">
@@ -69,7 +59,7 @@
               <a href="index.php">Inicio</a>
             </li>
             <li>
-              <a href="todosCuadros.php">Todos los productos</a>
+              <a href="products.php">Todos los productos</a>
             </li>
           </ul>
         </div>
