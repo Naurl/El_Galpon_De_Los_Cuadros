@@ -10,16 +10,6 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="icon" href ="images/logos/galpon.ico">
   <title>El Galpon de los Cuadros</title>
-
-  <style>
-    
-    body {
-
-        background: black;
-        background-size: 100% auto, 100% ;
-    } 
-
-  </style>
 </head>
 <header>
     <section class = "header_contact_section">
